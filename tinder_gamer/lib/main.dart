@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tinder_gamer/view/screens/lista.dart';
+import 'package:tinder_gamer/view/screens/login.dart';
 import 'package:tinder_gamer/view/screens/perfil.dart';
 import 'package:tinder_gamer/view/screens/projeto.dart';
 
@@ -13,15 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Gatch',
       theme: ThemeData(
-        primarySwatch: Colors.grey,
-        scaffoldBackgroundColor: Colors.grey[900],
-        textTheme: Theme.of(context).textTheme.apply(
-          bodyColor: Colors.white,
-        ),
+        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.blue[400],
       ),
-      home: const MyHomePage(title: 'Tinder Gamer'),
+      home: const MyHomePage(title: 'Gatch'),
     );
   }
 }
@@ -36,23 +34,45 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _currentScreen = 0;
+  int _currentScreen = 2;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey[700],
+        backgroundColor: Colors.blue[400],
         title: Text(widget.title),
       ),
       body: IndexedStack(
         index: _currentScreen,
         children:  [
+          Perfil(),
           Lista(),
           Projeto(),
-          Perfil(),
         ],
-      )
+      ),
+      bottomNavigationBar: BottomNavigationBar( 
+        items: const <BottomNavigationBarItem> [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Pefil'
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.list),
+            label: 'Jogadores'
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.info_outline),
+            label: 'Info'
+          ),
+        ],
+        currentIndex: _currentScreen,
+        onTap: (int novoItem) {
+          setState(() {
+            _currentScreen = novoItem;
+          });
+        },
+      ),
     );
   }
 }

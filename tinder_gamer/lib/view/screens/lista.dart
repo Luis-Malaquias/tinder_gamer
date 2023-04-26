@@ -17,7 +17,7 @@ class Lista extends StatelessWidget {
       itemBuilder: (context, index) {
         return Card(
           elevation: 5,
-          color: Colors.grey[600],
+          color: Colors.blue[600],
           child: ListTile(
               leading: Icon(Icons.person),
               title: Text("Usuário " + texto[index % texto.length])),
