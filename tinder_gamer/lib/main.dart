@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.grey,
-        scaffoldBackgroundColor: Colors.grey[800],
+        scaffoldBackgroundColor: Colors.grey[900],
         textTheme: Theme.of(context).textTheme.apply(
           bodyColor: Colors.white,
         ),
@@ -36,21 +36,21 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _currentScreen = 1;
+  int _currentScreen = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey[600],
+        backgroundColor: Colors.grey[700],
         title: Text(widget.title),
       ),
       body: IndexedStack(
         index: _currentScreen,
-        children: const [
+        children:  [
+          Lista(),
           Projeto(),
           Perfil(),
-          Lista(),
         ],
       )
     );

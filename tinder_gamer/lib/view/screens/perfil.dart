@@ -5,6 +5,11 @@ class Perfil extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text("esse é o prfil");
+    return Scaffold(
+      body: Column(
+        children: const [
+        ]
+      ),
+    );
   }
 }
