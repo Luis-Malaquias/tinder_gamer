@@ -10,23 +10,18 @@ class Projeto extends StatelessWidget{
         child: Column(
           children: [
             Image.asset("assets/images/iconeTinderGamer.png"),
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(50.0),
-              child: Text.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(text: "Esse é o Gatch\n\n",
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold), 
+              child: Column(
+                children: const [
+                  Text("Esse é o Gatch\n",
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)
                     ),
-                    TextSpan(text: "O intuito do Gatch é faciliar usuários a encontrar pessoas que gostam dos mesmos jogos para que possam jogar juntos.\n",
-                    style: TextStyle(fontSize: 20),
+                  Text("O Gatch nasceu com o intuito de conectar gamers por todo o mundo. Unir players dos mesmos jogos e com os mesmos interesses é nossa missão para construir uma comunidade mais unida e interpessoal. Nossa plataforma pega as informações dos nossos usuários e busca pessoas com interesses e perfis semelhantes para construir novas conexões.",
+                    style: TextStyle(fontSize: 18),
+                    textAlign: TextAlign.justify
                     ),
-                    TextSpan(text: "Para isso o aplicativo pega as informações inseridas em seu perfil e busca outros perfis parecidos com o seu.",
-                    style: TextStyle(fontSize: 20),
-                    ),
-                  ]
-                ),
-                textAlign: TextAlign.left,
+                ],
               ),
             ),
           ],

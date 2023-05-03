@@ -4,11 +4,6 @@ class Lista extends StatelessWidget {
   Lista({super.key});
 
   final List texto = ["A", "B", "C", "D", "E", "F"];
-  final List icons = [
-    Icons.cake,
-    Icons.calendar_month_outlined,
-    Icons.account_balance
-  ];
 
   @override
   Widget build(BuildContext context) {

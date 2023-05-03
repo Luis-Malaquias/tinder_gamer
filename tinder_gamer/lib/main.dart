@@ -1,10 +1,17 @@
+//Luis Francisco Ribeiro Malaquias 254289
+//Gabriel Antunes Tosi 254221
+
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:tinder_gamer/view/screens/lista.dart';
-import 'package:tinder_gamer/view/screens/login.dart';
 import 'package:tinder_gamer/view/screens/perfil.dart';
 import 'package:tinder_gamer/view/screens/projeto.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  await Hive.openBox('Gatch');
   runApp(const MyApp());
 }
 
@@ -40,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue[400],
+        backgroundColor: Colors.blue[500],
         title: Text(widget.title),
       ),
       body: IndexedStack(
