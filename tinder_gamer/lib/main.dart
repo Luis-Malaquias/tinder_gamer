@@ -1,12 +1,12 @@
 //Luis Francisco Ribeiro Malaquias 254289
 //Gabriel Antunes Tosi 254221
 
+// ignore_for_file: deprecated_colon_for_default_value, use_function_type_syntax_for_parameters, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:tinder_gamer/view/screens/lista.dart';
-import 'package:tinder_gamer/view/screens/perfil.dart';
-import 'package:tinder_gamer/view/screens/projeto.dart';
+import 'view/screens/login.dart';
+import 'view/screens/homePage.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,60 +26,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.blue[400],
       ),
-      home: const MyHomePage(title: 'Gatch'),
+      initialRoute: '/loginPage',
+      routes: {
+        '/loginPage':(context) => Login(),
+        '/homePage':(context) => HomePage(),
+      }
     );
   }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _currentScreen = 2;
-
-  @override
-  Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue[500],
-        title: Text(widget.title),
-      ),
-      body: IndexedStack(
-        index: _currentScreen,
-        children:  [
-          Perfil(),
-          Lista(),
-          Projeto(),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar( 
-        items: const <BottomNavigationBarItem> [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Pefil'
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            label: 'Jogadores'
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.info_outline),
-            label: 'Info'
-          ),
-        ],
-        currentIndex: _currentScreen,
-        onTap: (int novoItem) {
-          setState(() {
-            _currentScreen = novoItem;
-          });
-        },
-      ),
-    );
-  }
-}
+} 

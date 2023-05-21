@@ -10,7 +10,7 @@ class Perfil extends StatefulWidget {
   Perfil({Key? key}) : super(key: key);
 
   @override
-  _Perfil createState()=> _Perfil();
+  State<Perfil> createState()=> _Perfil();
 }
 
 class _Perfil extends State<Perfil>{
@@ -148,7 +148,7 @@ class _Perfil extends State<Perfil>{
                               TextButton(
                                 onPressed: () {
                                   Navigator.pop(context);
-                                  //box.clear();
+                                  box.clear();
                                 },
                                 child: const Text('Ok'),
                               ),
