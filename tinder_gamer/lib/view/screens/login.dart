@@ -70,153 +70,124 @@ class _Login extends State<Login>{
                     ),
                   ),
                   Expanded(
-                    child: DefaultTabController(
-                      length: 2,
-                      initialIndex: 0,
-                      child: Column(
-                        children: [
-                          Align(
-                            alignment: const Alignment(0, 0),
-                            child:  ButtonsTabBar(
-                              labelStyle: const TextStyle(color: Colors.black, fontSize: 15),
-                              unselectedLabelStyle: const TextStyle(color: Colors.white, fontSize: 15),
-                              backgroundColor: Colors.white,
-                              unselectedBackgroundColor: Colors.black.withOpacity(0.1),
-                              borderWidth: 0,
-                              radius: 20,
-                              elevation: 1,
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(20, 20, 20, 10),
+                          child: TextFormField(
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              labelText: 'Email',
+                              labelStyle: const TextStyle(fontSize: 20, color: Colors.black),
+                              hintText: 'Insira seu email...',
+                              hintStyle: const TextStyle(fontSize: 25),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                  color: Colors.white,
+                                  width: 1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.circular(8),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.circular(8),
+                              ),
+                              /*errorBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.circular(8),
+                              ),*/
+                              /*focusedErrorBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.circular(8),
+                              ),*/
+                              filled: true,
+                              fillColor: Colors.white,
                               contentPadding:
-                                const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
-                              tabs: const [
-                                Tab(
-                                  text: 'Entrar',
+                                  const EdgeInsetsDirectional.fromSTEB(
+                                      20, 24, 20, 24),
+                            ),
+                            style: const TextStyle(
+                                  fontSize: 25,
+                                  fontFamily: 'Poppins',
+                                  color: Color(0xFF0F1113),
                                 ),
-                                Tab(
-                                  text: 'Criar',
-                                )
-                              ],
-                            )
-                          ),
-                          Expanded(
-                            child: TabBarView(
-                              physics: NeverScrollableScrollPhysics(),
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
-                                  child: TextFormField(
-                                    obscureText: false,
-                                    decoration: InputDecoration(
-                                      labelText: 'Email',
-                                      labelStyle: TextStyle(fontSize: 20),
-                                      hintText: 'Insira seu email...',
-                                      hintStyle: TextStyle(fontSize: 25),
-                                      enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Colors.white,
-                                          width: 1,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8),
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0x00000000),
-                                          width: 1,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8),
-                                      ),
-                                      /*errorBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0x00000000),
-                                          width: 1,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8),
-                                      ),*/
-                                      /*focusedErrorBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0x00000000),
-                                          width: 1,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8),
-                                      ),*/
-                                      filled: true,
-                                      fillColor: Colors.white,
-                                      contentPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
-                                              20, 24, 20, 24),
-                                    ),
-                                    style: TextStyle(
-                                          fontSize: 25,
-                                          fontFamily: 'Poppins',
-                                          color: Color(0xFF0F1113),
-                                        ),
-                                    maxLines: 1,
-                                  )
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
-                                  child: TextFormField(
-                                    obscureText: false,
-                                    decoration: InputDecoration(
-                                      labelText: 'Senha',
-                                      labelStyle: TextStyle(fontSize: 20),
-                                      hintText: 'Insira sua senha...',
-                                      hintStyle: TextStyle(fontSize: 25),
-                                      enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Colors.white,
-                                          width: 1,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8),
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0x00000000),
-                                          width: 1,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8),
-                                      ),
-                                      /*errorBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0x00000000),
-                                          width: 1,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8),
-                                      ),*/
-                                      /*focusedErrorBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: Color(0x00000000),
-                                          width: 1,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8),
-                                      ),*/
-                                      filled: true,
-                                      fillColor: Colors.white,
-                                      contentPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
-                                              20, 24, 20, 24),
-                                    ),
-                                    style: TextStyle(
-                                          fontSize: 25,
-                                          fontFamily: 'Poppins',
-                                          color: Color(0xFF0F1113),
-                                        ),
-                                    maxLines: 1,
-                                  )
-                                ),
-                              ],
-                            )
+                            maxLines: 1,
                           )
-                        ]
-                      )
-                    )
+                        ),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                          child: TextFormField(
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              labelText: 'Senha',
+                              labelStyle: const TextStyle(fontSize: 20, color: Colors.black),
+                              hintText: 'Insira sua senha...',
+                              hintStyle: const TextStyle(fontSize: 25),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                  color: Colors.white,
+                                  width: 1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.circular(8),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: const BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.circular(8),
+                              ),
+                              /*errorBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.circular(8),
+                              ),*/
+                              /*focusedErrorBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius:
+                                    BorderRadius.circular(8),
+                              ),*/
+                              filled: true,
+                              fillColor: Colors.white,
+                              contentPadding:
+                                  const EdgeInsetsDirectional.fromSTEB(
+                                      20, 24, 20, 24),
+                            ),
+                            style: const TextStyle(
+                                  fontSize: 25,
+                                  fontFamily: 'Poppins',
+                                  color: Color(0xFF0F1113),
+                                ),
+                            maxLines: 1,
+                          )
+                        ),
+                        const Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                          
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
