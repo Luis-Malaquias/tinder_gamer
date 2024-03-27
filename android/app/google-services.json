@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "311730437136",
+    "project_id": "gatch-20a05",
+    "storage_bucket": "gatch-20a05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311730437136:android:17d02d2391aad1c0085e95",
+        "android_client_info": {
+          "package_name": "com.example.tinder_gamer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311730437136-41r5slluup1ll2cas42va0vk3ki6ojh5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfdNNwCFPv5xdzl-CN0OYKuY2KtJ7Fwr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311730437136-41r5slluup1ll2cas42va0vk3ki6ojh5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
